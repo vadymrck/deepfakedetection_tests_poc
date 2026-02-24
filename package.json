@@ -1,0 +1,38 @@
+{
+  "name": "deepfakedetection-tests-poc",
+  "version": "1.0.0",
+  "description": "Deepfake detection API test framework — PoC using Playwright AOM pattern",
+  "scripts": {
+    "detect": "ts-node detect.ts",
+    "evasion": "ts-node evasion.ts",
+    "falsepositives": "ts-node falsepositives.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --check .",
+    "format:write": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "test": "playwright test",
+    "test:ci": "playwright test tests/specs/edge.spec.ts --grep @ci",
+    "test:detection": "playwright test tests/specs/detection.spec.ts",
+    "test:evasion": "playwright test tests/specs/evasion.spec.ts",
+    "test:falsepositives": "playwright test tests/specs/falsepositives.spec.ts",
+    "test:edge": "playwright test tests/specs/edge.spec.ts",
+    "test:report": "playwright show-report"
+  },
+  "dependencies": {
+    "@realitydefender/realitydefender": "0.1.16",
+    "dotenv": "^16.0.0",
+    "sharp": "^0.33.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^20.0.0",
+    "eslint": "^9.21.0",
+    "globals": "^15.15.0",
+    "prettier": "^3.5.2",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0",
+    "typescript-eslint": "^8.24.1"
+  }
+}
