@@ -71,6 +71,8 @@ npm run falsepositives          # generate + test real image variants
 | `data/variants/fake_jpeg_recompress.jpg` | MANIPULATED | 0.95  |
 | `data/variants/fake_resize_down_up.jpg`  | MANIPULATED | 0.95  |
 | `data/variants/real_skin_smooth.jpg`     | SUSPICIOUS  | 0.54  |
-| `data/variants/real_freq_inject.jpg`     | AUTHENTIC   | 0.07  |
+| `data/variants/real_freq_inject.jpg`     | MANIPULATED | 0.93  |
+
+Baselines are last-observed values and may drift when backend models are updated.
 
 See `TESTING.md` for full test documentation, architecture decisions, and threshold rationale.
